@@ -6,13 +6,15 @@
     <title>BMI Calculator</title>
 </head>
 <body>
+  <div id ="container">
     <h1>Bmi</h1>
     <form >
-       <input name="height" value ="h1" type="text" placeholder="Enter your height in meter" />
-       <input name="weight" value ="w1" type="text" placeholder="Enter your weight in kilograms" />
+       <input id="height" name="height" value ="h1" type="text" placeholder="Enter your height in meter" />
+       <input id="weight" name="weight" value ="w1" type="text" placeholder="Enter your weight in kilograms" />
     </form>
-    <button type="submit" onclick="bmi()">Check your BMI</button>
-    <button type="submit" onclick="reset()">Reset</button>
+    <button id="submit" type="submit" onclick="bmi()">Check your BMI</button>
+    <button id="reset" type="reset" onclick="reset()">Reset</button>
+    </div>
     <script src="bmi.js">
        
     </script>
