@@ -21,9 +21,12 @@ function bmi(){
     else if(bmi >= 30){
         BMI.innerHTML = "Obese";
     }
-    else {
+    else if(bmi > 31){
         BMI.innerHTML = "Extremely Obese";
-    }   
+    } 
+    else {
+        BMI.innerHTML = "Invalid Input";
+    }
 }
 function reset(){
     BMI.innerHTML = "";
