@@ -4,27 +4,23 @@ let height = document.querySelector("#height")
 let weight = document.querySelector("#weight");
 let BMI = document.querySelector("h1");
 
-function bmi(){
-    let h = height.value;
+function bmi() {
+    let h = height.value / 100;
     let w = weight.value;
-    let bmi = w/(h*h);
-    BMI.innerHTML = bmi;
-    if(bmi < 18.5){
+    let bmi = w / (h * h);
+    if (isNaN(bmi) || !isFinite(bmi)) {
+        BMI.innerHTML = "Invalid Input";
+        return ;
+    }
+    if (bmi < 18.5) {
         BMI.innerHTML = "Underweight";
-    }
-    else if(bmi >= 18.5 && bmi < 25){
+    } else if (bmi >= 18.5 && bmi < 25) {
         BMI.innerHTML = "Normal";
-    }
-    else if(bmi >= 25 && bmi < 30){
+    } else if (bmi >= 25 && bmi < 30) {
         BMI.innerHTML = "Overweight";
-    }
-    else if(bmi >= 30){
+    } else if (bmi >= 30) {
         BMI.innerHTML = "Obese";
-    }
-    else if(bmi > 31){
-        BMI.innerHTML = "Extremely Obese";
-    } 
-    else {
+    } else {
         BMI.innerHTML = "Invalid Input";
     }
 }
