@@ -10,7 +10,7 @@ function bmi() {
     let bmi = w / (h * h);
     if (isNaN(bmi) || !isFinite(bmi)) {
         BMI.innerHTML = "Invalid Input";
-        return ;
+        return False;
     }
     if (bmi < 18.5) {
         BMI.innerHTML = "Underweight";
