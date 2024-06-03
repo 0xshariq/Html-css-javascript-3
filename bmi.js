@@ -1,5 +1,5 @@
 
-let reset = document.querySelector("#reset");
+let resetbtn = document.querySelector("#reset");
 let height = document.querySelector("#height")
 let weight = document.querySelector("#weight");
 let BMI = document.querySelector("h1");
@@ -33,3 +33,4 @@ function reset(){
     height.value = "";
     weight.value = "";
 }
+resetbtn.addEventListener("click",reset());
